@@ -3,7 +3,7 @@
 0. Input x1, y1 and x2,y2
 1. Calculate dx = x2-x1
 2. Calculate dy = y2-y1
-3. Calculate P = 2dy - y1
+3. Calculate P = 2dy - dx
 4. Set x = x1 and y =y1
 
 5. Repeat while x<=x2:
@@ -20,6 +20,7 @@
 
 Source code: 
 
+
 import matplotlib.pyplot as plt
 
 # 0. Input x1, y1 and x2, y2
@@ -33,7 +34,7 @@ dx = x2 - x1
 dy = y2 - y1
 
 # 3. Calculate P = 2*dy - y1 
-p = 2 * dy - y1
+p = 2 * dy - dx
 
 # 4. Set x = x1 and y = y1
 x = x1
@@ -63,4 +64,5 @@ plt.xlabel("X-Axis")
 plt.ylabel("Y-Axis")
 plt.legend()
 plt.grid()
+plt.axis("equal")
 plt.show()
