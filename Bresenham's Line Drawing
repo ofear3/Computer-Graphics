@@ -16,3 +16,51 @@
     x = x+1
 
 6. Stop
+
+
+Source code: 
+
+import matplotlib.pyplot as plt
+
+# 0. Input x1, y1 and x2, y2
+x1, y1 = 2, 3
+x2, y2 = 13, 9
+
+# 1. Calculate dx = x2 - x1
+dx = x2 - x1
+
+# 2. Calculate dy = y2 - y1
+dy = y2 - y1
+
+# 3. Calculate P = 2*dy - y1 
+p = 2 * dy - y1
+
+# 4. Set x = x1 and y = y1
+x = x1
+y = y1
+
+x_point = []
+y_point = []
+
+# 5. Repeat while x <= x2
+while x <= x2:
+    x_point.append(x)
+    y_point.append(y)
+
+    if p >= 0:
+        y = y + 1
+        p = p + 2 * (dy - dx)
+    else:
+        p = p + 2 * dy
+
+    x = x + 1
+
+# 6. OUTPUT
+
+plt.plot(x_point, y_point, marker="o", color="blue", linestyle="-", label="Bresenham's Algorithm")
+plt.title("Bresenham Line Drawing Algorithm")
+plt.xlabel("X-Axis")
+plt.ylabel("Y-Axis")
+plt.legend()
+plt.grid()
+plt.show()
