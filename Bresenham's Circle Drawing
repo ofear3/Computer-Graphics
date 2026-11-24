@@ -1,0 +1,68 @@
+//Algorithm
+
+1. Set x-0, r =10, y = r
+2. Set P  = 3-2r
+
+3. while x < = y :
+      plot(x,y)
+      plot(y,x)
+
+
+
+
+//Source Code
+
+x = 0
+r = 10
+p = 3 - 2*r
+y = r
+
+x_val = []
+y_val = []
+
+while  x <= y :
+    x_val.append(x)
+    y_val.append(y)
+
+    x_val.append(y)
+    y_val.append(x)
+
+    x_val.append(-x)
+    y_val.append(y)
+
+    x_val.append(-y)
+    y_val.append(x)
+
+    x_val.append(x)
+    y_val.append(-y)
+
+    x_val.append(y)
+    y_val.append(-x)
+
+    x_val.append(-x)
+    y_val.append(-y)
+
+    x_val.append(-y)
+    y_val.append(-x)
+
+    if p<0 :
+        p = p + 4*x + 6
+    else: 
+        p = p + 4*(x-y) + 10
+        y = y - 1
+    x = x + 1
+
+
+plt.plot(x_val, y_val, marker="o", color="red", linestyle="none", label="Bresenham's Algorithm")
+plt.title("Bresenham Circle Drawing Algorithm")
+plt.xlabel("X-Axis")
+plt.ylabel("Y-Axis")
+plt.legend()
+plt.grid
+plt.axis("equal")
+plt.show()
+
+
+
+
+
