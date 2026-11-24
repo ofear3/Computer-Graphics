@@ -1,0 +1,18 @@
+//Algorithm
+
+0. Input x1, y1 and x2,y2
+1. Calculate dx = x2-x1
+2. Calculate dy = y2-y1
+3. Calculate P = 2dy - y1
+4. Set x = x1 and y =y1
+
+5. Repeat while x<=x2:
+    plot(x,y)
+    if(p>=0) :
+       y = y+1
+       p = p+2(dy-dx)
+    else :
+       p = p+2dy
+    x = x+1
+
+6. Stop
