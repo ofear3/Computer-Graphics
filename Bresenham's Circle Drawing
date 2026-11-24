@@ -6,8 +6,20 @@
 3. while x < = y :
       plot(x,y)
       plot(y,x)
+      plot(-x,y)
+      plot(-y,x)
+      plot(x,-y)
+      plot(y,-x)
+      plot(-x,-y)
+      plot(-y,-x)
 
-
+      if p < 0 :
+            p = p + 4x + 6
+      else : 
+            p = p + 4 (x-y) + 10
+            y = y -1
+      x = x + 1
+4. Stop
 
 
 //Source Code
@@ -53,14 +65,15 @@ while  x <= y :
     x = x + 1
 
 
-plt.plot(x_val, y_val, marker="o", color="red", linestyle="none", label="Bresenham's Algorithm")
+plt.plot(x_val, y_val, "o", color="red")
 plt.title("Bresenham Circle Drawing Algorithm")
 plt.xlabel("X-Axis")
 plt.ylabel("Y-Axis")
-plt.legend()
-plt.grid
+plt.grid(True)
 plt.axis("equal")
 plt.show()
+
+
 
 
 
